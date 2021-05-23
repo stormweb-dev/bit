@@ -3,8 +3,16 @@ module.exports = {
 
 	execute: async (client, message) => {
 		if (!message.guild) return;
-		const prefix = client.config.prefix;
-		if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+		message.guild.config = client.db.get(`config.${message.guild.id}`) || {};
+
+		const prefix = message.guild.config.prefix || client.config.prefix;
+		if (!message.content.startsWith(prefix) || message.author.bot) {
+			if (message.mentions.has(client.user.id)) {
+				message.channel.send(client.embed.small(`:wave: | Hi! My prefix in this guild is \`${prefix}\`.`));
+			}
+			return;
+		}
 
 		const args = message.content.slice(prefix.length).trim().split(/ +/);
 		const commandName = args.shift().toLowerCase();
