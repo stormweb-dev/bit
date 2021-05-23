@@ -1,5 +1,8 @@
 # TOKEN
 token.js
 
+# DATABASE
+json.sqlite
+
 # NODE_MODULES
 node_modules

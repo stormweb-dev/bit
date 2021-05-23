@@ -5,6 +5,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 client.config = require(`./config`);
 client.embed = require(`./embed`);
+client.db = require(`./database`);
 
 const eventFiles = fs.readdirSync(`./src/events`).filter((f) => f.endsWith(`.js`));
 eventFiles.forEach((file) => {
