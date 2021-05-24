@@ -15,7 +15,7 @@ module.exports.small = (embed) => {
 };
 
 module.exports.small.error = (embed) => {
-	const embedData = typeof embed == `string` ? { description: `:x: | ${embed}` } : embed;
+	const embedData = typeof embed == `string` ? { description: `❌ | ${embed}` } : embed;
 	if (!embedData.color) embedData.color = config.embed.color;
 	return new Discord.MessageEmbed(embedData);
 };

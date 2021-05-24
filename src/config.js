@@ -4,6 +4,6 @@ module.exports = {
 
 	embed: {
 		color: `#949cdf`,
-		footer: `Bit | Discord Bot`,
+		footer: { text: `Bit | Discord Bot`, iconURL: `https://media.discordapp.net/attachments/845652254764695592/846466737653284874/Bit.png` },
 	},
 };

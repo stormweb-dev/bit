@@ -19,6 +19,7 @@ commandFolders.forEach((folder) => {
 	const commandFiles = fs.readdirSync(`./src/commands/${folder}`).filter((f) => f.endsWith(`.js`));
 	commandFiles.forEach((file) => {
 		const command = require(`./commands/${folder}/${file}`);
+		command.category = folder;
 		client.commands.set(command.name, command);
 	});
 });
