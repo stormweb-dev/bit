@@ -17,8 +17,8 @@ module.exports = {
 		const args = message.content.slice(prefix.length).trim().split(/ +/);
 		const commandName = args.shift().toLowerCase();
 
-		if (!client.commands.has(commandName)) return;
-		const command = client.commands.get(commandName);
+		if (!client.commands.find((cmd) => [cmd.name, ...cmd.aliases].includes(commandName))) return;
+		const command = client.commands.find((cmd) => [cmd.name, ...cmd.aliases].includes(commandName));
 
 		if (command.permission) {
 			if ((command.permission == `BIT_OWNER` && !client.config.owners.includes(message.author.id)) || !message.member.hasPermission(command.permission)) return message.channel.send(client.embed.small.error(`You do not have permission to perform this command.`));

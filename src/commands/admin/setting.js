@@ -1,12 +1,13 @@
 module.exports = {
 	name: `setting`,
 	description: `Manage server settings.`,
+	aliases: [`settings`, `option`, `options`],
 	permission: `ADMINISTRATOR`,
 
 	execute: async (client, message, args) => {
 		const subcmds = [`prefix`];
 
-		if (!args[0] || !subcmds.includes(args[0].toLowerCase())) return message.channel.send(client.embed.small.error(`Invalid subcommand. *\`${subcmds.join(`\`, \``)}\`*`));
+		if (!args[0] || !subcmds.includes(args[0].toLowerCase())) return message.channel.send(client.embed.small.error(`Invalid subcommand.\n*Options: \`${subcmds.join(`\`, \``)}\`*`));
 
 		switch (args[0].toLowerCase()) {
 			case `prefix`:
