@@ -3,7 +3,7 @@
 Bit is an open source Discord bot.\
 The official bot is live on _**Bit#9454** (ID: 845643521817313341)_\
 \
-For support you can join the [support server](https://discord.gg/DPYHSECp9F).
+For support you can join the [support server](https://discord.gg/wrrqxEACqF).
 
 ### Feature requests
 
