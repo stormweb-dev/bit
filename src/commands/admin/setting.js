@@ -13,7 +13,7 @@ module.exports = {
 			case `prefix`:
 				if (!args[1]) return message.channel.send(client.embed.small.error(`Please specify a new prefix.`));
 				client.db.set(`config.${message.guild.id}.prefix`, args.slice(1).join(` `));
-				return message.channel.send(client.embed.small(`Prefix changed to \`${args.slice(1).join(` `)}\`.`));
+				return message.channel.send(client.embed.small.success(`Prefix changed to \`${args.slice(1).join(` `)}\`.`));
 				break;
 		}
 	},

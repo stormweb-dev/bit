@@ -4,6 +4,7 @@ module.exports = {
 
 	execute: async (client, message, args) => {
 		var categories = [
+			{ name: `Economy`, emoji: `🪙` },
 			{ name: `Admin`, emoji: `⛔` },
 			{ name: `Other`, emoji: `🔎` },
 		];
@@ -12,7 +13,7 @@ module.exports = {
 			return message.channel.send(
 				client.embed({
 					title: `❓ | Help Menu`,
-					description: `These are all of Bits commands. Do \`${message.guild.config.prefix || client.config.prefix}help [command]\` for more information on a specific command.\n\n${categories
+					description: `These are all of Bit's commands. Do \`${message.guild.config.prefix || client.config.prefix}help [command]\` for more information on a specific command. Join the [support server](https://discord.gg/wrrqxEACqF) for extra help.\n\n${categories
 						.map((cat) => {
 							return `**${cat.emoji} | ${cat.name}**\n${client.commands
 								.filter((cmd) => cmd.category == cat.name.toLowerCase())
