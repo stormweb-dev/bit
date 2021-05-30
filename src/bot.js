@@ -31,20 +31,3 @@ commandFolders.forEach((folder) => {
 });
 
 client.login(require(`./token`));
-
-// const Discord = require(`discord.js`);
-// const DiscordButtons = require(`discord-buttons`);
-
-// const client = new Discord.Client();
-// DiscordButtons(client);
-
-// client.on(`message`, (message) => {
-// 	if (message.content === `.test`) {
-// 		var button = new DiscordButtons.MessageButton().setID(`test`).setStyle(`red`).setLabel(`wowie`);
-// 		message.channel.send(`aaa`, button);
-// 	}
-// });
-
-// client.login(`ODQ1Njc0NjcwNjk4NzkwOTM0.YKkZ6Q.xWxGHwRuUTNZH99XlqNP1qbhWyQ`);
-
-// client.once(`ready`, () => console.log(`a`));
